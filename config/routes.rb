@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  get 'chat/index'
-  get 'chat/show'
-  root 'application#hello'
+  root 'chat#index'
+  get '/result', to: 'chat#show'
 end
