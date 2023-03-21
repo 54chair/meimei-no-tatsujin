@@ -28,6 +28,9 @@ gem 'jbuilder', '~> 2.7'
 # OpenAIのgem
 gem "ruby-openai"
 
+# 環境変数を管理するgem
+gem 'dotenv-rails'
+
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.4', require: false
 
