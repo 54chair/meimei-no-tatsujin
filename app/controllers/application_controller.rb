@@ -1,5 +1,5 @@
 class ApplicationController < ActionController::Base
-  def hello
-    render html: "hello, world!"
-  end
+  require "openai"
+  require 'dotenv'
+  Dotenv.load
 end
