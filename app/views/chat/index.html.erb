@@ -1,11 +1,7 @@
 <div>
   <h2>キーワードを入力してください</h2>
   <%= form_with(url: result_path, method: :get) do |form| %>
-    <%= form.text_field :keyword1, size: 10 %>
-    <%= form.text_field :keyword2, size: 10 %>
-    <%= form.text_field :keyword3, size: 10 %>
-    <%= form.text_field :keyword4, size: 10 %>
-    <%= form.text_field :keyword4, size: 10 %>
+    <%= form.text_field :keyword, size: 10 %>
     <%= form.submit %>
   <% end %>
 </div>
