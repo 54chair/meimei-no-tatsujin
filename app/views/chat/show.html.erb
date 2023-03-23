@@ -1,7 +1,11 @@
-<div>
-  <h2>サービス名の生成結果</h2>
-  <br>
-  <%= @chats %>
-  <br>
-  <%= link_to 'TOPページ', root_path %>
-</div>
+<section>
+  <div class="show-generated">
+    <h2>サービス名の生成結果</h2>
+    <div class="show-generated-result">
+      <%= @chats %>
+    </div>
+    <div class="d-grid gap-2">
+      <%= link_to 'TOPページ', root_path, class:'btn btn-warning' %>
+    </div>
+  </div>
+</section>
