@@ -1,7 +1,25 @@
-<div>
-  <h2>キーワードを入力してください</h2>
-  <%= form_with(url: result_path, method: :get) do |form| %>
-    <%= form.text_field :keyword, size: 10 %>
-    <%= form.submit %>
-  <% end %>
-</div>
+<section>
+  <div class="home-about-service">
+    <h1>命名の達人</h1>
+    <p>
+      命名の達人は、新しいWebサービスやアプリを開発する際に、そのサービス名を考える支援をするためのツールです。
+      特徴や用途などのキーワードを入力することで、自動的にサービス名の候補を生成することができます。
+    </p>
+  </div>
+  <div class="home-keyword-input-form">
+    <h2>キーワード入力欄</h2>
+    <div class="row d-flex justify-content-center">
+      <div class="col-md-6">
+        <%= form_with(url: result_path, method: :get) do |form| %>
+          <div class="mb-3">
+            <%= form.label :"キーワード" %>
+            <%= form.text_field :keyword, size: 10, class: "form-control" %>
+          </div>
+          <div class="mb-4 d-grid gap-2 mx-auto text-center">
+            <%= form.submit "サービス名を生成", class: "btn btn-warning" %>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</section>
