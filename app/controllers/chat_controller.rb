@@ -3,7 +3,7 @@ class ChatController < ApplicationController
   end
 
   def show
-    @keyword = params[:keyword]
+    @keyword = chat_params[:keyword]
 
     response = @client.chat(
       parameters: {
@@ -12,5 +12,11 @@ class ChatController < ApplicationController
       })
 
     @chats = response.dig("choices", 0, "message", "content")
+  end
+  
+  private
+
+  def chat_params
+    params.permit(:keyword)
   end
 end
