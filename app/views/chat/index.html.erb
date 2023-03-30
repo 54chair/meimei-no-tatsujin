@@ -23,14 +23,27 @@
     </div>
   </div>
   <div class="home-service-consept">
-    <h2>コンセプト</h2>
-    <p>
-      個人開発で作ったアプリにどんなサービス名をつけようか迷ったことはありませんか？<br>
-      そんな経験から生まれたのが「命名の達人」です。<br>
-      キーワードを入力するとAIが自動でアプリ名を5つ考えてくれます。<br>
-      もし気に入ったアプリ名が見つからなくても、キーワードを変えると新たなサービス名を考案してくれます。
-    </p>
+    <div class="home-service-consept-about">
+      <h2>コンセプト</h2>
+      <p>
+        個人開発で作ったアプリにどんなサービス名をつけようか迷ったことはありませんか？<br>
+        そんな経験から生まれたのが「命名の達人」です。<br>
+        キーワードを入力するとAIが自動でアプリ名を5つ考えてくれます。<br>
+        もし気に入ったアプリ名が見つからなくても、キーワードを変えると新たなサービス名を考案してくれます。
+      </p>
+    </div>
+    <div class="row d-flex justify-content-center">
+      <div class="col-md-6">
+        <%= form_with(url: result_path, method: :get) do |form| %>
+          <div class="d-grid gap-2 mx-auto text-center">
+            <%= form.hidden_field :keyword, value: "タスク管理アプリ" %>
+            <%= form.submit "「タスク管理アプリ」を例に生成", class: "btn btn-warning" %>
+          </div>
+        <% end %>
+      </div>
+    </div>
   </div>
+    
   <div class="home-how-to-use">
     <h2>使い方</h2>
     <p>
